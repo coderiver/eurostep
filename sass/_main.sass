@@ -1,2 +1,93 @@
 // Normally mainpage styles
- 
+.tabs
+	position: relative
+	height: 100%
+	&__nav
+		position: absolute
+		top: 313px 
+		li
+			margin-bottom: 15px
+			a
+				display: inline-block
+				height: 30px
+				line-height: 30px
+				padding: 0 11px 
+				+pfd_m
+				font-size: 18px
+				color: #000
+				text-transform: uppercase
+				text-decoration: none
+				+transition(all 100ms linear)
+				&:hover
+					color: #fff
+			&.is-active
+				a
+					background: #fff
+					&:hover
+						color: #000 
+	&__content1
+		height: 100%
+		background: #ffe019 url(../img/slide1.jpg) 50% 32px no-repeat
+	&__content2
+		height: 100%
+		background: url(../img/slide2.jpg)
+		+cover
+	&__content3
+		height: 100%
+		background: url(../img/slide3.jpg)
+		+cover
+	&__content4
+		height: 100%
+		background: url(../img/slide4.jpg)
+		+cover			
+	&__inner
+		width: 1068px
+		margin: 0 auto
+		padding-top: 260px
+		text-align: center
+.about-option
+	width: 580px
+	margin: 20px auto 40px
+	font-size: 16px
+	color: #201e10		 
+.topnews
+	position: absolute
+	bottom: 80px
+	left: 0px
+	right: 0px
+	&__inner
+		max-width: 1500px
+		margin: 0 auto 
+	&__list
+		+justify	
+	&__item	
+		+clr
+		width: 340px
+		+justify-child
+	&__img
+		float: left
+		width: 60px
+		height: 60px
+		margin-right: 26px
+		margin-bottom: 66px
+		+box
+		overflow: hidden
+		border: 3px solid #fff
+		+box-shadow(3px 3px 0 0 rgba(#000, .2))
+		img
+			width: 100%
+			height: auto
+	&__info
+		overflow: hidden
+		text-align: left
+		font-family: 'PT Sans', sans-serif
+		a
+			display: inline-block
+			margin-bottom: 10px
+			color: #201e10
+			&:hover
+				text-decoration: none
+	&__date
+		color: #201e10
+		font-size: 11px 
+				  	
