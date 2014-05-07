@@ -65,6 +65,16 @@ head.ready(function() {
    		});	
     };
     
+    // cases hover
+
+    $(".js-cases-btn").hover(
+    	function(){
+    		$(this).parents('.cases__item').find('img').addClass('is-hover');
+    	},
+    	function(){
+			$(this).parents('.cases__item').find('img').removeClass('is-hover');
+    	}
+    );
 
     $(window).resize(function(){
     	if ($(".tabs").length) {
