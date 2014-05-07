@@ -94,12 +94,17 @@
     +clr
     p
         margin-bottom: 20px
+    .content_contacts &
+        margin-top: 40px
 .col40
     float: left
     width: 40%
     margin-left: 20%
     &:first-child
         margin-left: 0
+.col50
+    float: left
+    width: 50%        
         
 .quote
     position: relative
@@ -228,7 +233,50 @@
     &__lid
         font-weight: bold
         font-size: 16px
-        margin-bottom: 30px                        
+        margin-bottom: 30px
+.adress
+    position: relative
+    padding-left: 33px
+    font: 14px Tahoma, sans-serif
+    p
+        margin-bottom: 10px
+    &:before
+        content: ""
+        position: absolute
+        top: 0px
+        left: 0px
+        +s(marker)
+.contacts
+    position: relative
+    padding-left: 33px
+    margin-bottom: 22px
+    &:before
+        content: ""
+        position: absolute
+        top: 0px
+        left: 0px
+        +s(phone)
+    p
+        margin-bottom: 0 
+.email
+    display: inline-block
+    position: relative
+    padding-left: 33px
+    color: #000
+    &:hover
+        text-decoration: none
+    &:before
+        content: ""
+        position: absolute
+        top: 5px
+        left: 0px
+        +s(email)
+.map
+    margin-right: 6px
+    margin-top: 50px
+    height: 333px
+    +box-shadow(3px 3px 0 0 #fff, 6px 6px 0 0 #e3e3e3)
+
 
                      
     
