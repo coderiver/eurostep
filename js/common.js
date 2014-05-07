@@ -37,31 +37,34 @@ head.ready(function() {
     };
 
     // yandex map
-    ymaps.ready(function () {
-    var myMap = new ymaps.Map('YMapsID', {
-        center: [53.9000000, 27.5666700],
-        zoom: 15,
-        controls: []
-    }),
+    if ($("#YMapsID").length) {
+   		ymaps.ready(function () {
+   		var myMap = new ymaps.Map('YMapsID', {
+   		    center: [53.9000000, 27.5666700],
+   		    zoom: 15,
+   		    controls: []
+   		}),
 
-        // Создаем метку с помощью вспомогательного класса.
-        myPlacemark1 = new ymaps.Placemark([53.9000000, 27.5666700], {
-            // Свойства.
-            // Содержимое иконки, балуна и хинта.
-            iconContent: '',
-            balloonContent: 'Балун',
-            hintContent: 'Стандартный значок метки'
-        }, {
-            // Опции.
-            // Стандартная фиолетовая иконка.
-            preset: 'twirl#violetIcon',
-            iconColor: '#ffc113'
-        });
+   		    // Создаем метку с помощью вспомогательного класса.
+   		    myPlacemark1 = new ymaps.Placemark([53.9000000, 27.5666700], {
+   		        // Свойства.
+   		        // Содержимое иконки, балуна и хинта.
+   		        iconContent: '',
+   		        balloonContent: 'Балун',
+   		        hintContent: 'Стандартный значок метки'
+   		    }, {
+   		        // Опции.
+   		        // Стандартная фиолетовая иконка.
+   		        preset: 'twirl#violetIcon',
+   		        iconColor: '#ffc113'
+   		    });
 
-     	myMap.geoObjects
-        	.add(myPlacemark1)
+   		 	myMap.geoObjects
+   		    	.add(myPlacemark1)
+   		
+   		});	
+    };
     
-    });
 
     $(window).resize(function(){
     	if ($(".tabs").length) {
