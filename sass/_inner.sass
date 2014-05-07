@@ -75,6 +75,7 @@
 
 .content
     overflow: hidden
+    padding-bottom: 50px
 .chronology
     +clr
     margin-bottom: 50px
@@ -167,6 +168,7 @@
         padding-top: 20px
         margin-bottom: 10px 
         display: inline-block
+        text-align: left
         color: #201e10
         &:hover
             text-decoration: none
@@ -178,11 +180,7 @@
             width: 65px
             height: 5px
             background: #ffdd00
-    &__date
-        color: #959595
-        font-size: 11px
     &__nav
-        margin-bottom: 20px
         a
             position: relative
             display: inline-block
@@ -213,7 +211,24 @@
             position: absolute
             top: 1px
             right: -20px
-            +s(arr-right)        
+            +s(arr-right)
+
+//article
+.article
+    +clr
+    margin-bottom: 50px
+    p
+        margin-bottom: 20px
+    img
+        width: 33%
+        float: left
+        margin-right: 5%
+        margin-bottom: 40px
+        +box-shadow(3px 3px 0 0 #fff, 6px 6px 0 0 #e3e3e3)
+    &__lid
+        font-weight: bold
+        font-size: 16px
+        margin-bottom: 30px                        
 
                      
     
