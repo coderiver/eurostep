@@ -57,6 +57,10 @@ body
 +font(PFAgoraSansProUltraBlack, pfagorasanspro-ultrablack)	
 =agora_ub
 	font-family: 'PFAgoraSansProUltraBlack', sans-serif
+	
++font(PFAgoraSansProBold, pfagorasanspro-bold)	
+=agora_b
+	font-family: 'PFAgoraSansProBold', sans-serif	
 
 +font(PFAgoraSansProItalic, pfagorasanspro-italic)	
 =agora_it
@@ -67,14 +71,28 @@ body
 
 .out
 	position: relative
+	background: #ffdd00
 	height: 100%
-	background: #ffdd00 
+.out_inner
+	min-height: 100%
+	height: auto !important
+	margin: 0 auto -80px			 
 .h1
 	text-align: center
 	font-size: 50px
 	+agora_ub
 	color: #000
 	text-transform: uppercase
+.h2
+	margin-bottom: 15px
+	font-size: 36px
+	+agora_b
+	color: #201e10
+.h3
+	margin-bottom: 15px
+	+agora_b
+	font-size: 24px
+	color: #201e10	
 .subtitle
 	width: 580px
 	margin: 0 auto 40px 
@@ -214,6 +232,8 @@ body
 		height: 80px
 		border-top: 3px solid #fff
 		+box-shadow(inset 0px 3px 0px 0px rgba(#000, .2))
+.footer_inner
+	position: relative		
 .copyrights
 	float: left
 	font: 12px/80px Tahoma, sans-serif
@@ -236,8 +256,7 @@ body
 		position: absolute
 		top: 0px
 		left: -20px
-		+s(repeat)
-	 
+		+s(repeat) 
 
 
 

@@ -1,7 +1,8 @@
 .container
     max-width: 1280px
-    margin: 0 auto 110px
+    margin: 0 auto 0px
     padding-top: 158px
+    padding-bottom: 110px
     .h1
         margin-bottom: 10px
 .breadcrumbs
@@ -31,7 +32,7 @@
                 text-decoration: none
                 &:hover
                     text-decoration: underline
-.content
+.wpapper
     position: relative
     &:before
         content: ""
@@ -42,12 +43,109 @@
         width: 6px
         background: rgba(#000, .2)
         z-index: 1 
-    //+box-shadow(-3px 3px 0 0 rgba(#000, .2))
     &__inner
+        +clr
         position: relative
         padding: 50px 37px
         background: #fff
         +box-shadow(3px 3px 0 0 rgba(#000, .2))
-        z-index: 2 
+        z-index: 2
+
+//menu
+.menu
+    float: left
+    width: 248px
+    padding-right: 10px
+    &__item
+        margin-bottom: 10px
+    &__link
+        display: inline-block
+        padding: 0 10px
+        height: 30px
+        line-height: 30px
+        text-transform: uppercase
+        +pfd_m
+        font-size: 18px
+        color: #000
+        &:hover
+            text-decoration: none
+        &.is-active
+            background: #ffdd00
+            text-decoration: none
+
+.content
+    overflow: hidden
+.chronology
+    +clr
+    margin-bottom: 50px
+    +agora_b
+    font-size: 16px
+    color: #201e10
+    p
+        line-height: 1.8
+    &__year
+        float: left
+        margin-right: 18px
+        font-size: 44px
+
+// columns for text
+.cols
+    +clr
+    p
+        margin-bottom: 20px
+.col40
+    float: left
+    width: 40%
+    margin-left: 20%
+    &:first-child
+        margin-left: 0
+        
+.quote
+    position: relative
+    margin: 50px 0
+    padding: 27px 67px 
+    border: 3px solid #ffdd00                   
+    +agora_it
+    p
+        position: relative
+        &:before
+            content: "—"
+            position: absolute
+            top: 0px
+            left: -30px
+.list
+    li
+        position: relative
+        padding-left: 54px
+        margin-bottom: 25px
+        &:before
+            content: ""
+            position: absolute 
+            top: 7px
+            left: 0px
+            width: 25px
+            height: 5px
+            background: #ffdd00
+.list-numb
+    counter-reset: li
+    li
+        position: relative
+        padding-left: 54px
+        margin-bottom: 25px
+        &:before
+            content: counter(li)
+            counter-increment: li
+            position: absolute
+            top: 0px
+            left: 0px
+            +agora_b
+            font-size: 18px
+            color: #201e10 
+    
+                                           
+        
+
+
+
                              
 
