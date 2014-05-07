@@ -144,9 +144,10 @@
             
 // news
 .news
-    padding-top: 50px
-    padding-right: 6px
-    +justify
+    &__list
+        padding-top: 50px
+        padding-right: 6px
+        +justify
     &__item
         +justify-child
         width: 44%
@@ -179,7 +180,41 @@
             background: #ffdd00
     &__date
         color: #959595
-        font-size: 11px                                     
+        font-size: 11px
+    &__nav
+        margin-bottom: 20px
+        a
+            position: relative
+            display: inline-block
+            text-transform: uppercase
+            font-size: 18px
+            +pfd_m
+            color: #000
+            &:hover
+                text-decoration: none
+    &__prev
+        padding-left: 22px
+        margin-right: 29px
+        &:before
+            content: ""
+            position: absolute
+            top: 1px
+            left: 0px
+            +s(arr-left)
+        &.is-disabled
+            color: #b7b7b7
+            text-decoration: none
+            cursor: default
+            &:before
+                +s(arr-left-grey)    
+    &__next
+        &:before
+            content: ""
+            position: absolute
+            top: 1px
+            right: -20px
+            +s(arr-right)        
+
                      
     
                                            
