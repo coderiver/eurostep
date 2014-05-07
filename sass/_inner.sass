@@ -2,7 +2,6 @@
     max-width: 1280px
     margin: 0 auto 0px
     padding-top: 158px
-    padding-bottom: 110px
     .h1
         margin-bottom: 10px
 .breadcrumbs
@@ -34,6 +33,7 @@
                     text-decoration: underline
 .wpapper
     position: relative
+    margin-bottom: 110px
     &:before
         content: ""
         position: absolute
@@ -140,7 +140,47 @@
             left: 0px
             +agora_b
             font-size: 18px
-            color: #201e10 
+            color: #201e10
+            
+// news
+.news
+    padding-top: 50px
+    padding-right: 6px
+    +justify
+    &__item
+        +justify-child
+        width: 44%
+        margin-bottom: 50px
+    &__img
+        display: block
+        overflow: hidden
+        height: 200px
+        margin-bottom: 20px
+        font-size: 0
+        +box-shadow(3px 3px 0 0 #fff, 6px 6px 0 0 #e3e3e3)
+        img
+            min-width: 100%
+            height: 100%
+    &__link
+        position: relative
+        padding-top: 20px
+        margin-bottom: 10px 
+        display: inline-block
+        color: #201e10
+        &:hover
+            text-decoration: none
+        &:before
+            content: ""
+            position: absolute
+            top: 0px
+            left: 0px
+            width: 65px
+            height: 5px
+            background: #ffdd00
+    &__date
+        color: #959595
+        font-size: 11px                                     
+                     
     
                                            
         
