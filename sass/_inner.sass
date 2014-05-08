@@ -72,6 +72,18 @@
         &.is-active
             background: #ffdd00
             text-decoration: none
+.submenu
+    padding-left: 20px
+    &__item
+        padding: 9px 0 
+    &__link
+        font-weight: bold
+        color: #000
+        &:hover
+            text-decoration: none
+        &.is-active
+            color: #6f6f6f
+            text-decoration: none                
 
 .content
     overflow: hidden
@@ -132,6 +144,16 @@
             width: 25px
             height: 5px
             background: #ffdd00
+    &.list_cols
+        +clr
+        padding-top: 20px
+        li
+            float: left
+            width: 50%
+            padding-left: 55px
+            +box
+            p
+                width: 80%        
 .list-numb
     counter-reset: li
     li
@@ -153,6 +175,7 @@
         li
             float: left
             width: 50%
+            margin-bottom: 20px
             padding-left: 30px
             +box
             p
@@ -383,7 +406,33 @@
         margin-bottom: 5px
         font-size: 18px
         font-weight: bold    
-        color: #201e10                      
+        color: #201e10 
+        
+// gallery
+.gallery
+    &__list
+        width: 713px
+        +justify
+    &__item
+        +justify-child
+        margin-bottom: 50px
+    &__link
+        display: block
+        width: 332px
+        height: 176px
+        font-size: 0
+        overflow: hidden
+        background: #ffdd00 
+        +box-shadow(3px 3px 0 0 #fff, 6px 6px 0 0 #e3e3e3)
+        img
+            width: 100%
+            min-height: 100%
+            height: auto
+            +transition(opacity 150ms linear)
+        &:hover
+            img
+                +opacity(.3)       
+                                       
 
 
 

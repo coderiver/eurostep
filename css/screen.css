@@ -139,6 +139,12 @@ body { min-width: 1024px; min-height: 914px; font-size: 14px; font-family: "PT S
 .menu__link:hover { text-decoration: none; }
 .menu__link.is-active { background: #ffdd00; text-decoration: none; }
 
+.submenu { padding-left: 20px; }
+.submenu__item { padding: 9px 0; }
+.submenu__link { font-weight: bold; color: black; }
+.submenu__link:hover { text-decoration: none; }
+.submenu__link.is-active { color: #6f6f6f; text-decoration: none; }
+
 .content { overflow: hidden; padding-bottom: 50px; }
 
 .chronology { *zoom: 1; margin-bottom: 50px; font-family: "PFAgoraSansProBold", sans-serif; font-size: 16px; color: #201e10; }
@@ -162,13 +168,17 @@ body { min-width: 1024px; min-height: 914px; font-size: 14px; font-family: "PT S
 
 .list li { position: relative; padding-left: 54px; margin-bottom: 25px; }
 .list li:before { content: ""; position: absolute; top: 7px; left: 0px; width: 25px; height: 5px; background: #ffdd00; }
+.list.list_cols { *zoom: 1; padding-top: 20px; }
+.list.list_cols:after { content: " "; display: table; clear: both; }
+.list.list_cols li { float: left; width: 50%; padding-left: 55px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.list.list_cols li p { width: 80%; }
 
 .list-numb { counter-reset: li; }
 .list-numb li { position: relative; padding-left: 54px; margin-bottom: 25px; }
 .list-numb li:before { content: counter(li); counter-increment: li; position: absolute; top: 0px; left: 0px; font-family: "PFAgoraSansProBold", sans-serif; font-size: 18px; color: #201e10; }
 .list-numb.list-numb_cols { *zoom: 1; padding-top: 20px; }
 .list-numb.list-numb_cols:after { content: " "; display: table; clear: both; }
-.list-numb.list-numb_cols li { float: left; width: 50%; padding-left: 30px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.list-numb.list-numb_cols li { float: left; width: 50%; margin-bottom: 20px; padding-left: 30px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .list-numb.list-numb_cols li p { width: 80%; }
 
 .news__list { padding-top: 50px; padding-right: 6px; text-align: justify; line-height: 0; font-size: 1px; text-justify: newspaper; zoom: 1; text-align-last: justify; }
@@ -230,3 +240,10 @@ body { min-width: 1024px; min-height: 914px; font-size: 14px; font-family: "PT S
 .cases__info { overflow: hidden; padding: 20px 28px; }
 .cases__info p { margin-bottom: 20px; }
 .cases__link { display: inline-block; margin-bottom: 5px; font-size: 18px; font-weight: bold; color: #201e10; }
+
+.gallery__list { width: 713px; text-align: justify; line-height: 0; font-size: 1px; text-justify: newspaper; zoom: 1; text-align-last: justify; }
+.gallery__list:after { content: ""; display: inline-block; width: 100%; height: 0px; visibility: hidden; overflow: hidden; }
+.gallery__item { display: inline-block; line-height: normal; vertical-align: top; font-size: 14px; margin-bottom: 50px; }
+.gallery__link { display: block; width: 332px; height: 176px; font-size: 0; overflow: hidden; background: #ffdd00; -moz-box-shadow: 3px 3px 0 0 white, 6px 6px 0 0 #e3e3e3; -webkit-box-shadow: 3px 3px 0 0 white, 6px 6px 0 0 #e3e3e3; box-shadow: 3px 3px 0 0 white, 6px 6px 0 0 #e3e3e3; }
+.gallery__link img { width: 100%; min-height: 100%; height: auto; -moz-transition: opacity 150ms linear; -o-transition: opacity 150ms linear; -webkit-transition: opacity 150ms linear; transition: opacity 150ms linear; }
+.gallery__link:hover img { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; }

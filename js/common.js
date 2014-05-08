@@ -76,6 +76,25 @@ head.ready(function() {
     	}
     );
 
+    // fancybox
+
+    $(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		padding: 3,
+		nextEffect: 'fade',
+		prevEffect: 'fade',
+		helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+	});
+
+
+
+
+
     $(window).resize(function(){
     	if ($(".tabs").length) {
 			tabs_menu();
