@@ -4,7 +4,9 @@
 	height: 100%
 	&__nav
 		position: absolute
-		top: 313px 
+		top: 313px
+		+r(w1600)
+			margin-left: 45px 
 		li
 			margin-bottom: 15px
 			a
@@ -41,10 +43,15 @@
 		background: url(../img/slide4.jpg)
 		+cover			
 	&__inner
-		width: 1068px
+		max-width: 1068px
 		margin: 0 auto
 		padding-top: 260px
 		text-align: center
+		+r(w1600)
+			max-width: 800px
+			padding-top: 200px
+		+r(w1280)
+			max-width: 568px	
 .about-option
 	width: 580px
 	margin: 20px auto 40px
@@ -55,6 +62,9 @@
 	bottom: 80px
 	left: 0px
 	right: 0px
+	+box
+	+r(w1600)
+		padding: 0 45px 
 	&__inner
 		max-width: 1500px
 		margin: 0 auto 
@@ -64,9 +74,11 @@
 		+clr
 		width: 340px
 		+justify-child
-		background: red
-		+r(w1500)
-			background: green 
+		+r(w1280)
+			width: 300px
+		&.last
+			+r(w1600)
+				display: none
 	&__img
 		float: left
 		width: 60px

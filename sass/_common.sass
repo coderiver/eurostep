@@ -187,6 +187,9 @@ body
 		max-width: 1500px
 		margin: 0 auto 
 		height: 132px
+		+box
+		+r(w1600)
+			padding: 0 45px 
 	&__contacts
 		float: right
 		padding-top: 34px
@@ -220,11 +223,16 @@ body
 	+box
 	border: 3px solid #fff
 	+box-shadow(inset 3px 3px 0px 0px rgba(#000, .2), 3px 3px 0px 0px rgba(#000, .2))
+	+r(w1280)
+		width: 554px
+		margin-left: -277px 
 	&__list
 		+clr
 		li
 			float: left
-			padding: 0 19px 
+			padding: 0 19px
+			+r(w1280)
+				padding: 0 15px  
 			a
 				display: block
 				height: 62px
@@ -238,7 +246,9 @@ body
 				&:hover
 					+box-shadow(inset 0px -5px 0px 0px #fff)
 				&.is-active
-					+box-shadow(inset 0px -5px 0px 0px #fff)	
+					+box-shadow(inset 0px -5px 0px 0px #fff)
+				+r(w1280)
+					font-size: 17px		
 			&.lang
 				border-left: 3px solid #fff
 
@@ -255,8 +265,11 @@ body
 		max-width: 1500px
 		margin: 0 auto
 		height: 80px
+		+box
 		border-top: 3px solid #fff
 		+box-shadow(inset 0px 3px 0px 0px rgba(#000, .2))
+		+r(w1280)
+			padding: 0 45px 
 .footer_inner
 	position: relative		
 .copyrights
