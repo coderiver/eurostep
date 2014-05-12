@@ -1,8 +1,8 @@
 head.ready(function() {
 	
 	// preloader init
-
-	loader.load_percent();
+	console.log(loader.el);
+	loader.fun();
 
 	// tabs menu position
 

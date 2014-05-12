@@ -1,29 +1,26 @@
 
-var loader = new Object (
-
-  // step 1 preloader
-  
-	function load_percent(){
-		var preloader = document.getElementsByClassName('preloader');
-		var pText = document.createElement('p');
+var loader = {
+  el: 'hrek',
+  fun: function load_percent(){
+    var preloader = $('.preloader');
+    var pText = document.createElement('p');
     var prNum = 0;
 
-		preloader.appendChild(pText);
+    preloader.append(pText);
 
     var animation = setInterval (function(){
-      preloader.style.backgroundColor='#F08080';
+      preloader.css('background-color', '#F08080');
       prNum+=6;
       pText.innerHTML = "Идет загрузка: "+prNum+" %";
-      preloader.style.width = prNum+"px";
+      preloader.css('width', prNum);
 
       if (prNum >= 100 ) {
         pText.innerHTML = "Загрузка завершена";
-        preloader.style.width = 100+"px";
-        clearInterval(a);
+        preloader.css('width', 100);
+        //clearInterval(a);
       }
-
     }, 500);
+  }
+	
 
-	}
-
-);
+}

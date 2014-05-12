@@ -267,5 +267,5 @@ body { min-width: 1024px; min-height: 914px; font-size: 14px; font-family: "PT S
 .gallery__link:hover img { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; }
 
 .preloader { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: white; text-align: center; }
-.preloader:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
+.preloader:after { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
 .preloader p { display: inline-block; vertical-align: middle; }
