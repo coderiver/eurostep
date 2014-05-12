@@ -265,3 +265,7 @@ body { min-width: 1024px; min-height: 914px; font-size: 14px; font-family: "PT S
 .gallery__link { display: block; width: 332px; height: 176px; font-size: 0; overflow: hidden; background: #ffdd00; -moz-box-shadow: 3px 3px 0 0 white, 6px 6px 0 0 #e3e3e3; -webkit-box-shadow: 3px 3px 0 0 white, 6px 6px 0 0 #e3e3e3; box-shadow: 3px 3px 0 0 white, 6px 6px 0 0 #e3e3e3; }
 .gallery__link img { width: 100%; min-height: 100%; height: auto; -moz-transition: opacity 150ms linear; -o-transition: opacity 150ms linear; -webkit-transition: opacity 150ms linear; transition: opacity 150ms linear; }
 .gallery__link:hover img { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; }
+
+.preloader { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: white; text-align: center; }
+.preloader:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
+.preloader p { display: inline-block; vertical-align: middle; }

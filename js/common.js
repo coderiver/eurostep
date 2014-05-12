@@ -1,5 +1,9 @@
 head.ready(function() {
 	
+	// preloader init
+
+	loader.load_percent();
+
 	// tabs menu position
 
 	function tabs_menu(){
@@ -15,12 +19,11 @@ head.ready(function() {
 
     function tab() {
        $(".js-tab").each(function(){
-         var tab_link = $(this).find("a");
-         var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
-         tab_cont.hide();
-         $(this).parents(".js-tab-group").find(".js-tab1").show();
-         // $(this).find('li:nth-child(1)').addClass('is-active');
-            tab_link.on("click", function() {
+        var tab_link = $(this).find("a");
+        var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
+        tab_cont.hide();
+        $(this).parents(".js-tab-group").find(".js-tab1").show();
+           tab_link.on("click", function() {
                 var index = $(this).attr("href");
                 tab_link.removeClass("is-active");
                 tab_link.parent().removeClass("is-active");

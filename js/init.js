@@ -1,1 +1,1 @@
-head.load("js/lib/jquery.js", "js/lib/html5shiv.js", "js/common.js", "http://api-maps.yandex.ru/2.1-dev/?lang=ru-RU&load=package.full", "js/lib/jquery.fancybox.js", "js/lib/jquery.mousewheel-3.0.6.pack.js");
+head.load("js/lib/jquery.js", "js/lib/html5shiv.js", "js/object.js", "js/common.js", "http://api-maps.yandex.ru/2.1-dev/?lang=ru-RU&load=package.full", "js/lib/jquery.fancybox.js", "js/lib/jquery.mousewheel-3.0.6.pack.js");
