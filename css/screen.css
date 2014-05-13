@@ -268,4 +268,5 @@ body { min-width: 1024px; min-height: 914px; font-size: 14px; font-family: "PT S
 
 .preloader { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: white; text-align: center; }
 .preloader:after { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
-.preloader p { display: inline-block; vertical-align: middle; }
+.preloader__counter { position: relative; display: inline-block; vertical-align: middle; z-index: 2; font-size: 50px; color: black; font-family: "PFAgoraSansProUltraBlack", sans-serif; }
+.preloader__progress { position: absolute; top: 0; bottom: 0; background: #ffdd00; z-index: 1; }

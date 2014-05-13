@@ -12,6 +12,18 @@
         width: 0
         height: 100%
         vertical-align: middle
-    p
+    &__counter
+        position: relative
         display: inline-block
-        vertical-align: middle     
+        vertical-align: middle
+        z-index: 2
+        font-size: 50px
+        color: #000
+        +agora_ub
+    &__progress
+        position: absolute
+        top: 0
+        bottom: 0
+        background: #ffdd00
+        z-index: 1
+
