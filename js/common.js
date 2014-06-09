@@ -1,7 +1,7 @@
 head.ready(function() {
 	
 	// preloader init
-	loader.loading();
+	//loader.loading();
 
 	// tabs menu position
 
