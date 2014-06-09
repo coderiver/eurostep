@@ -7,10 +7,10 @@ function runanimation(){
 		setTimeout(function(){
 			console.log(i);
 			$('#frames img').removeClass('showme');
-			$('#frames img').eq(i).addClass('showme');
+			$("#frames img[src$='/"+i+".jpg'").addClass('showme');
 			runanimation();
 			i++;
-		}, 300);
+		}, 200);
 	}
 	else{
 		$('.preloader').fadeOut(3000);
@@ -24,7 +24,8 @@ function runanimation(){
 // assign 50 non-cache-able images via an image generator
 var imagesArray = new Array(40).join(',').split(',');
 imagesArray = imagesArray.map(function(el, i){
-    return 'img/frames/' + i + '.jpg?' + +new Date();
+    return 'img/frames/' + i + '.jpg';
+    //return 'img/frames/' + i + '.jpg?' +new Date();
 });
 console.log(imagesArray);
 

@@ -64,6 +64,11 @@
         position: absolute   
         display: block
         width: 100% 
-        display: none
+        //display: none
+        z-index: 1
+        opacity: 0  
+        //+transition(all 0.1 linear)
         &.showme
-            display: block !important
+            //display: block !important
+            opacity: 1 
+            z-index: 20 
