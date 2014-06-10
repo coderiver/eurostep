@@ -6,8 +6,8 @@ function runanimation(){
 	if(i<40){
 		setTimeout(function(){
 			console.log(i);
-			$('#frames img').removeClass('showme');
-			$('#frames img[src$="/'+i+'.jpg"]').addClass('showme');
+			$('#frames>div').removeClass('showme');
+			$('#frames .arr'+i).addClass('showme');
 			runanimation();
 			i++;
 		}, 200);
@@ -46,8 +46,15 @@ new preLoader(imagesArray, {
         // update the progress element
         // legend.innerHTML = '<span>' + index + ' / ' + this.queue.length + ' ('+percent+'%)</span>';
         // progress.value = index;
+        // var regExp = /\"([^)]+)\"/;
+        // var matches = regExp.exec(imageEl);
+        console.log(img);
+        nomer = img.split('/')[2].split('.')[0];
+        console.log(nomer);
+        imageEl = '<div class="arr arr'+nomer+'" style="background-image:url('+img+')"></div>';
+        console.log(imageEl);
+        $('#frames').append(imageEl);
         
-        imageContainer.appendChild(imageEl);
         // can access any propery of this
         console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
     }, 
