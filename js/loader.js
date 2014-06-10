@@ -62,10 +62,17 @@ new preLoader(imagesArray, {
         // fires when whole list is done. cache is primed.
         console.log('done', loaded);
         imageContainer.style.display = 'none';
+        $('.preloader').addClass('is-done');
         $('.preloader__fademe').fadeOut('slow',function(){
+
         	$('#frames').fadeTo( "slow" , 1, function() {
-        		$('.preloader').addClass('is-done');
-	    		runanimation();
+        		
+                $('.preloader__text').fadeTo( "slow" , 1, function() {
+                    //alert('done');
+                    setTimeout(function(){$('.preloader__text').fadeOut('slow');}, 1000);
+                    setTimeout(function(){runanimation();}, 2000);
+                });
+	    		//runanimation();
 	  		});
         });
         
