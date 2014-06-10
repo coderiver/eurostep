@@ -7,7 +7,7 @@ function runanimation(){
 		setTimeout(function(){
 			console.log(i);
 			$('#frames img').removeClass('showme');
-			$("#frames img[src$='/"+i+".jpg'").addClass('showme');
+			$('#frames img[src$="/'+i+'.jpg"]').addClass('showme');
 			runanimation();
 			i++;
 		}, 200);
