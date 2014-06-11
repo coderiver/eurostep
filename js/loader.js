@@ -3,7 +3,7 @@ var i = 0;
 function runanimation(){
 	//alert('runrun');
 	//$('#frames img').hide();
-	if(i<40){
+	if(i<41){
 		setTimeout(function(){
 			console.log(i);
 			$('#frames>div').removeClass('showme');
@@ -22,7 +22,7 @@ function runanimation(){
 }
 
 // assign 50 non-cache-able images via an image generator
-var imagesArray = new Array(40).join(',').split(',');
+var imagesArray = new Array(41).join(',').split(',');
 imagesArray = imagesArray.map(function(el, i){
     return 'img/frames/' + i + '.jpg';
     //return 'img/frames/' + i + '.jpg?' +new Date();
@@ -69,8 +69,8 @@ new preLoader(imagesArray, {
         		
                 $('.preloader__text').fadeTo( "slow" , 1, function() {
                     //alert('done');
-                    setTimeout(function(){$('.preloader__text').fadeOut('slow');}, 1000);
-                    setTimeout(function(){runanimation();}, 2000);
+                    setTimeout(function(){$('.preloader__text').addClass('fademe')}, 3000);
+                    setTimeout(function(){runanimation();}, 3500);
                 });
 	    		//runanimation();
 	  		});
