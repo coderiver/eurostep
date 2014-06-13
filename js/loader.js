@@ -4,6 +4,8 @@ head.ready(function() {
 
 $('.repeat').click(function(event) {
     $('.preloader').show();
+    i = 0;
+    $('.preloader__text').removeClass('fademe')
 
     $('.preloader__fademe').fadeOut('slow',function(){
 
@@ -19,7 +21,7 @@ $('.repeat').click(function(event) {
                 });
             
             });
-    setTimeout(function(){runanimation();}, 3500);
+    //setTimeout(function(){runanimation();}, 3500);
 });
 
 if(localStorage['bla3']){
