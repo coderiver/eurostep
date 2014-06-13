@@ -1,4 +1,36 @@
+
 head.ready(function() {
+
+
+$('.repeat').click(function(event) {
+    $('.preloader').show();
+
+    $('.preloader__fademe').fadeOut('slow',function(){
+
+                $('#frames').fadeTo( "slow" , 1, function() {
+                    
+                    $('.preloader__text').fadeTo( "slow" , 1, function() {
+                        //alert('done');
+                        setTimeout(function(){$('.preloader__text').addClass('fademe')}, 3000);
+                        setTimeout(function(){runanimation();}, 3500);
+                        localStorage['bla3'] = '1111'; 
+                    });
+                    //runanimation();
+                });
+            
+            });
+    setTimeout(function(){runanimation();}, 3500);
+});
+
+if(localStorage['bla3']){
+    $('.preloader').hide();
+}
+
+
+
+
+
+
 var i = 0;
 function runanimation(){
 	//alert('runrun');
@@ -14,6 +46,7 @@ function runanimation(){
 	}
 	else{
 		$('.preloader').fadeOut(3000);
+
 	}
 	// for(i=0;i<=50;i++){
 	// 	//console.log(i);
@@ -60,21 +93,29 @@ new preLoader(imagesArray, {
     }, 
     onComplete: function(loaded, errors){
         // fires when whole list is done. cache is primed.
+        
         console.log('done', loaded);
         imageContainer.style.display = 'none';
         $('.preloader').addClass('is-done');
-        $('.preloader__fademe').fadeOut('slow',function(){
+        if(localStorage['bla3']){}
+        else{
+            $('.preloader__fademe').fadeOut('slow',function(){
 
-        	$('#frames').fadeTo( "slow" , 1, function() {
-        		
-                $('.preloader__text').fadeTo( "slow" , 1, function() {
-                    //alert('done');
-                    setTimeout(function(){$('.preloader__text').addClass('fademe')}, 3000);
-                    setTimeout(function(){runanimation();}, 3500);
-                });
-	    		//runanimation();
-	  		});
-        });
+            	$('#frames').fadeTo( "slow" , 1, function() {
+            		
+                    $('.preloader__text').fadeTo( "slow" , 1, function() {
+                        //alert('done');
+                        setTimeout(function(){$('.preloader__text').addClass('fademe')}, 3000);
+                        setTimeout(function(){runanimation();}, 3500);
+                        localStorage['bla3'] = '1111'; 
+                    });
+    	    		//runanimation();
+    	  		});
+            
+            });
+
+        }
+
         
         
         if (errors){
